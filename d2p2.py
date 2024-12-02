@@ -11,11 +11,14 @@ def meetsCondition(number1, number2, ascending):
 safe_reports = 0
 
 def is_safe_with_dampener(checked, report, ascending=None, dampened=False):
+    # If the report check is at the end then auto pass.
     if len(report) == 1: return True
     if len(report) == 2 and dampened == False: return True
 
+    # Setting ascend flag
     if ascending == None: ascending = True if report[0] - report[1] < 0 else False
 
+    # If the condition isn't met at any point then start the check again with the number or the neighbours removed.
     if not meetsCondition(report[0], report[1], ascending):
         if dampened: return False
         return is_safe_with_dampener(checked=[], report=[*checked, *report[1:]], ascending=None, dampened=True) \
