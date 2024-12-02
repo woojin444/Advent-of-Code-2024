@@ -18,4 +18,5 @@ for number in list1:
     if number in list2:
         similarity += number*list2[number]
 
+# Final time complexity of O(n)
 print(similarity)

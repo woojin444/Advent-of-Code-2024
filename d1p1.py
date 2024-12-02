@@ -27,4 +27,5 @@ difference = 0
 for i in range(len(list1)):
     difference += abs(list1[i]-list2[i])
 
+# Final time complexity of O(nlog n)
 print(difference)
