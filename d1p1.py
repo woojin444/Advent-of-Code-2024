@@ -20,7 +20,6 @@ with open("inputs/d1p12.txt", "r") as input_file:
         insort(list1, int(number1))
         insort(list2, int(number2))
 
-
 # Adds the differences
 difference = 0
 
