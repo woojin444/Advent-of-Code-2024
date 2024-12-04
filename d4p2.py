@@ -25,6 +25,9 @@ def x_mas_search(row, column, input, word, direction1, direction2):
 for row in range(len(input)):
     for column in range(len(input[row])):
         if input[row][column] == "A":
+            # Idea is to search for the ends of the crosses, removing a letter from the "SM" and only when
+            # the final string is empty, the topleft or topright can come out to be True.
+            # If they're both True, then we have the X-MAS.
             topleft = x_mas_search(row, column, input, "SM", (-1,-1), (1,1))
             topright = x_mas_search(row, column, input, "SM", (-1,1), (1,-1))
 
