@@ -10,7 +10,7 @@ for i in range(len(disk_map)):
     if i % 2 == 0:
         for j in range(repeat):
             disk.append(number)
-            number += 1
+        number += 1
     else:
         for j in range(repeat):
             disk.append(".")
@@ -37,6 +37,4 @@ for item in dense_disk:
     answer += number * item
     number += 1
 
-print(len(dense_disk))
 print(answer)
-
