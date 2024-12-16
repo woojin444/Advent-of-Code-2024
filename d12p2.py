@@ -72,6 +72,7 @@ class Region:
                     if current_flag[0] == current_flag[1]:
                         previous_flag = current_flag
                     else:
+                        # Only add a side when the flags are different and if the current flag components are also different
                         horizontal_sides += 1
                         previous_flag = current_flag 
             
