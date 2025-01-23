@@ -23,9 +23,8 @@ while len(gates) > 0:
     else:
         gates.append(gate)
 
-answer = ""
-z_nodes = sorted([node for node in nodes if node.startswith('z')])
-for z_node in reversed(z_nodes):
-    answer += str(nodes[z_node])
+x_binary = "".join(map(str,[nodes[x_node] for x_node in reversed(sorted([node for node in nodes if node.startswith('x')]))]))
+y_binary = "".join(map(str,[nodes[y_node] for y_node in reversed(sorted([node for node in nodes if node.startswith('y')]))]))
+z_binary = "".join(map(str,[nodes[z_node] for z_node in reversed(sorted([node for node in nodes if node.startswith('z')]))]))
 
-print(int(answer, 2))
+print(int(z_binary, 2))
